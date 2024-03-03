@@ -1,0 +1,21 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Brilliant.MainPage"
+             BackgroundColor="#282424">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Grid x:Name="ChessBoardGrid"
+                  HorizontalOptions="Center"
+                  VerticalOptions="Center"
+                  HeightRequest="800"
+                  WidthRequest="800"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
