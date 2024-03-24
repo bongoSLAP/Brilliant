@@ -1,4 +1,4 @@
-﻿namespace Brilliant.Enum;
+﻿namespace Brilliant.Enums;
 
 public enum MoveType
 {

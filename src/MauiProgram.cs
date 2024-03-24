@@ -1,4 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Brilliant.Interfaces;
+using Brilliant.Models;
+using Brilliant.Services;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
 
@@ -17,6 +21,9 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
 
+        Board board = new Board();
+        builder.Services.AddSingleton<IBoardService>(BoardService.GetInstance(board));
+        
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
